@@ -15,7 +15,7 @@ async def login():
     return sign_jwt_token()
 
 @router.post("/abastecimentos")
-async def root(payload: Item, credentials: HTTPAuthorizationCredentials = Depends(security)):    
+async def root(payload: Item):    
     combustivel = payload.tipo_combustivel.name
     
     # Regra de Negócio (Flag de Anomalia) checa se o preco_por_litro é +25% do preço original (enum PrecoCombustivel) 

@@ -1,2 +1,7 @@
 python-jose
-fastapi
+fastapi[standard]
+uvicorn[standard]
+validate-docbr
+psycopg2-binary
+redis
+sqlalchemy
